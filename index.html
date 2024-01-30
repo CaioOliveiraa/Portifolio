@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="h-100" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Caio's Portifolio</title>
+</head>
+
+<body class="h-100">
+    <header>
+        <p>Portifolio</p>
+    </header>
+
+    <section id="profileContainer" class="h-100">
+        <div id="about">
+            <h1>Hi, I'm Caio</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quis deleniti nostrum tenetur accusantium maiores reiciendis quae veniam at temporibus nulla atque iusto porro repellendus nobis laborum voluptatem, aliquid sed.</p>
+        </div>
+        <div class="d-flex justify-content-center">
+            <img id="profilePic" src="assets/Perfil.png" alt="Profile_Picture">
+        </div>
+    </section>
+
+    <section id="projetos" class="py-5">
+        <div class="container">
+            <h2>Projetos</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="projeto1.jpg" class="card-img-top" alt="Projeto 1">
+                        <div class="card-body">
+                            <h3 class="card-title">Projeto 1</h3>
+                            <p class="card-text">Descrição do Projeto 1.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="projeto2.jpg" class="card-img-top" alt="Projeto 2">
+                        <div class="card-body">
+                            <h3 class="card-title">Projeto 2</h3>
+                            <p class="card-text">Descrição do Projeto 2.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-5">
+        <div class="container">
+            <h2>Contato</h2>
+            <form id="formulario-contato">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" class="form-control" rows="4" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Seu Nome. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
