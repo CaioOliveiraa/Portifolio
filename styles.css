@@ -25,7 +25,7 @@ header {
 }
 
 #about{
-    max-width: 400;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,13 +33,11 @@ header {
     margin-right: 20rem;
     color:#fff;
     text-align:justify;
-    background-color: #A020F0;
 }
 
 #about h1{
 
     text-align: left;
-    background-color: red;
 }
 
 #about span{
@@ -47,9 +45,10 @@ header {
 }
 
 #about p{
-    width: 400px;
+    width: 500px;
     color: #808080;
     font-size: 1.2rem;
+    padding: 10px;
 }
 
 #profilePic{
@@ -58,3 +57,64 @@ header {
     border-radius: 50%;
     /* margin-left: 10rem; */
 }
+
+#buttonCV{
+    text-decoration: none;
+    outline:none;
+    height: 3rem;
+    text-align: center;
+
+    width: 9rem;
+    border-radius:2rem;
+    background: rgb(17, 17, 17);
+    border: 2px solid #A020F0;
+    color:#A020F0;
+    letter-spacing:1px;
+    text-shadow:0;
+    font-size: 0.9rem;
+    font-weight:bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    &:hover {
+        color:white;
+        background: #A020F0;
+    }
+    &:active {
+        letter-spacing: 2px ;
+    }
+}
+
+.onclic {
+    width: 40px;
+    border-color:gray;
+    border-width:3px;
+    font-size:0;
+    border-left-color:green;
+    animation: rotating 2s 0.25s linear infinite;
+    
+    &:after {
+        content:"";
+    }
+    &:hover {
+        color:green;
+        background: white;
+    }
+    }
+    .validate {
+    font-size:13px;
+    color: white;
+    background: green;
+    &:after {
+        font-family:'FontAwesome';
+        content:"\f00c";
+    }
+    }
+    
+    @keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+    }
