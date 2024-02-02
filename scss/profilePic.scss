@@ -1,0 +1,167 @@
+// $purple: #A020F0;
+
+// @function createShadow($shadowsCount, $radius, $color, $startAngle) {
+//     $sh: "0px 0px 0px transparent";
+//     $angle: $startAngle / $shadowsCount;
+
+//     @for $i from 1 through $shadowsCount {
+//         $x: $radius * cos($angle * $i);
+//         $y: $radius * sin($angle * $i);
+//         $sh: "#{$sh}, #{$x} #{$y} #{$color}";
+//     }
+
+//     @return unquote($sh);
+// }
+
+// #profilePic{
+//     --border-color: #A020F0;
+//     --background-color: #212752;
+//     border: 4px solid var(--border-color);
+//     padding: 6px;
+//     border-radius: 50%;
+//     position: relative;
+//     width: 25rem;
+//     height: 25rem;
+//     border-radius: 50%;
+//     transition: 0.3s ease;
+
+//     &::before,
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         height: 6px;
+//         width: 6px;
+//         // border-radius: 100%;
+//         transform: rotate(45deg);
+//         left: 0;
+//         right: 0;
+//         top: 0;
+//         bottom: 0;
+//         margin: auto;
+//     }
+
+//     &::before {
+//         box-shadow: createShadow(8, 7rem, #A020F0, 360deg);
+//         animation: animate-2 1s ease-in-out infinite;
+//     }
+
+//     &::after {
+//         box-shadow: createShadow(16, 6rem, #A020F0, 360deg);
+//         transform: rotate(12deg);
+//         animation: animate-1 1s ease-in-out infinite;
+//     }
+
+//     &:hover{
+//         width: 30rem;
+//         height: 30rem;
+//     }
+
+// }
+
+// @keyframes animate-1 {
+
+//     0%,
+//     100% {
+//         box-shadow: createShadow(40, 13.5rem, #A020F0, 360deg);
+//     }
+
+//     50% {
+//         box-shadow: createShadow(40, 13rem, #A020F0, 360deg);  }
+// }
+
+// @keyframes animate-2 {
+
+//     0%,
+//     100% {
+//         box-shadow: createShadow(20, 13rem, #A020F0, 360deg);
+//     }
+
+//     50% {
+//         box-shadow: createShadow(20, 13.5rem, #A020F0, 360deg);
+//     }
+// }
+
+$purple: #A020F0;
+
+@function createShadow($shadowsCount, $radius, $color, $startAngle) {
+    $sh: "0px 0px 0px transparent";
+    $angle: $startAngle / $shadowsCount;
+
+    @for $i from 1 through $shadowsCount {
+        $x: $radius * cos($angle * $i);
+        $y: $radius * sin($angle * $i);
+        $sh: "#{$sh}, #{$x} #{$y} #{$color}";
+    }
+
+    @return unquote($sh);
+}
+
+#avatar {
+    --border-color: #A020F0;
+    --background-color: #212752;
+    border: 4px solid var(--border-color);
+    padding: 6px;
+    border-radius: 50%;
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    transition: 0.3s ease;
+
+    &:hover {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        height: 6px;
+        width: 6px;
+        transform: rotate(45deg);
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    &::before {
+        box-shadow: createShadow(8, 7rem, #A020F0, 360deg);
+        animation: animate-2 1s ease-in-out infinite;
+    }
+
+    &::after {
+        box-shadow: createShadow(16, 6rem, #A020F0, 360deg);
+        transform: rotate(12deg);
+        animation: animate-1 1s ease-in-out infinite;
+    }
+}
+
+@keyframes animate-1 {
+    0%, 100% {
+        box-shadow: createShadow(40, 13.5rem, #A020F0, 360deg);
+    }
+
+    50% {
+        box-shadow: createShadow(40, 13rem, #A020F0, 360deg);
+    }
+}
+
+@keyframes animate-2 {
+    0%, 100% {
+        box-shadow: createShadow(20, 13rem, #A020F0, 360deg);
+    }
+
+    50% {
+        box-shadow: createShadow(20, 13.5rem, #A020F0, 360deg);
+    }
+}

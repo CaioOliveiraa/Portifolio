@@ -1,4 +1,5 @@
 const CVBtn = document.querySelector(".btnCV");
+const btnMenu = document.getElementById("btnMenu")
 
 CVBtn.addEventListener('click', () => {
     CVBtn.classList.add("onclick");
@@ -37,4 +38,11 @@ function downloadCV() {
     setTimeout(() => {
         document.body.removeChild(link);
     }, 100);
+}
+
+btnMenu.addEventListener('click', toggleMenu);
+
+function toggleMenu(){
+    const nav = document.getElementById("nav")
+    nav.classList.toggle("active")
 }
