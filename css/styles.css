@@ -9,14 +9,19 @@
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: rgb(17, 17, 17);
     color: white;
-    border-bottom: 0.1rem solid  #A020F0;
+    border-bottom: 0.1rem solid #A020F0;
     padding: 1rem;
     height: 3.5rem;
+    z-index: 999;    
 }
 
 /* #btnMenu{
@@ -24,10 +29,15 @@ header {
 } */
 
 #menu{
-    /* display: none; */
+    display: none;
+    height: 100vh;
     position: absolute;
     width: 100%;
     top: 3.5rem;
+    right: 0rem;
+    background-color: red;
+    z-index: 1000;
+
 }
 
 #menu li{
@@ -48,7 +58,7 @@ header {
 }
 
 #nav.active #menu{
-    display: flex;
+    display: block;
 }
 
 
