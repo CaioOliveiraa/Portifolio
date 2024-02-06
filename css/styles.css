@@ -24,19 +24,16 @@ header {
     z-index: 999;    
 }
 
-/* #btnMenu{
-    
-} */
-
 #menu{
     display: none;
     height: 100vh;
     position: absolute;
     width: 100%;
-    top: 3.5rem;
+    top: 0;
     right: 0rem;
     background-color: rgb(17, 17, 17, 0.25);
     backdrop-filter: blur(10px);
+    transition: .6s;
     z-index: 1000;
     padding-top: 4rem;
 }
@@ -53,6 +50,10 @@ header {
     transition: 0.3s ease;
 }
 
+#menu span{
+    color: #A020F0;
+}
+
 #menu li a:hover{
     color: #A020F0;
     text-decoration: none;
@@ -60,10 +61,39 @@ header {
 }
 
 #nav.active #menu{
+    top: 3.5rem;
     display: flex;
     justify-content: top;
     align-items: center;
     flex-direction: column;
+}
+
+.btnMenu{
+    display: flex;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#hamburger{
+    border-top: 2px solid;
+    width: 30px;
+    color: #A020F0;
+}
+
+#hamburger::after, #hamburger::before{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: currentColor;
+    margin-top: 5px;
+}
+
+#nav.active #hamburger{
+    background-color: aqua;
 }
 
 

@@ -1,5 +1,5 @@
 const CVBtn = document.querySelector(".btnCV");
-const btnMenu = document.getElementById("btnMenu")
+const btnMenu = document.querySelector(".btnMenu")
 
 CVBtn.addEventListener('click', () => {
     CVBtn.classList.add("onclick");
