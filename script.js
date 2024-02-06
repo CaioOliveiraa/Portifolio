@@ -1,6 +1,8 @@
 const CVBtn = document.querySelector(".btnCV");
 const btnMenu = document.querySelector(".btnMenu")
 
+// Botão Download CV
+
 CVBtn.addEventListener('click', () => {
     CVBtn.classList.add("onclick");
     setTimeout(() => {
@@ -40,9 +42,25 @@ function downloadCV() {
     }, 100);
 }
 
-btnMenu.addEventListener('click', toggleMenu);
+// Botão Menu 
 
-function toggleMenu(){
+btnMenu.addEventListener('click', toggleMenu);
+btnMenu.addEventListener('touchstart', toggleMenu)
+
+function toggleMenu(event){
+    if(event.type === 'touchstart') event.preventDefault()
     const nav = document.getElementById("nav")
     nav.classList.toggle("active")
 }
+
+// switch theme
+
+const themeSwitch = document.getElementById('themeSwitch')
+
+themeSwitch.addEventListener('change', function(){
+    if(this.checked){
+        document.body.classList.add('lightTheme');
+    }else{
+        document.body.classList.remove('lightTheme')
+    }
+})
