@@ -65,6 +65,35 @@ themeSwitch.addEventListener('change', function(){
     }
 })
 
+// Card creation
+
+document.addEventListener("DOMContentLoaded", function() {
+    const languages = [
+        { name: "HTML", image: "./assets/img/html.png" },
+        { name: "CSS", image: "./assets/img/css.png" },
+        { name: "JavaScript", image: "./assets/img/js.png" },
+        { name: "React.js", image:"./assets/img/react.png"},
+        { name: "Python", image:"./assets/img/python.png"},
+        { name: "Node.js", image:"./assets/img/nd-js.png"},
+        { name: "MongoDB", image:"./assets/img/mongodb.png"},
+    ];
+
+    const cardContainer = document.querySelector(".cards"); 
+
+    languages.forEach(language => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.innerHTML = `
+            <h5>${language.name}</h5>
+            <img src="${language.image}" alt="${language.name} Logo"> 
+        `;
+        cardContainer.appendChild(card);
+    });
+});
+
+
+// observer API
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting){
