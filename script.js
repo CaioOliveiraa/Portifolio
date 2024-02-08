@@ -64,3 +64,18 @@ themeSwitch.addEventListener('change', function(){
         document.body.classList.remove('lightTheme')
     }
 })
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting){
+            entry.target.classList.add("show")
+        }else{
+            entry.target.classList.remove("show")
+        }
+    }, {
+        threshold: 1
+    })
+})
+
+const hiddenElements = document.querySelectorAll(".hidden")
+hiddenElements.forEach((element) => observer.observe(element))

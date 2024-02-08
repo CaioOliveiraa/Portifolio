@@ -32,9 +32,9 @@
         </label>
     </header>
 
-    <section id="profileContainer" class="h-100">
-        <div id="about">
-            <h1>Ola, eu sou <span>Caio Oliveira</span></h1>
+    <section id="profileContainer" class=" d-flex justify-content-center align-items-center m-5">
+        <div id="title">
+            <h1>Olá, eu sou <span>Caio Oliveira</span></h1>
             <p>Estudante de Engenharia da computação (9/10) | Desenvolvedor Front end</p> 
             <a
                 href="#"
@@ -49,7 +49,15 @@
             </div>
     </section>
 
-    <section id="projetos" class="py-5">
+    <section id="aboutContainer" class="d-flex justify-content-center align-items-center">
+        <div id="about">
+            <h1 class=" hidden ">About Me</h1>
+            <p class=" hidden ">Estudante de Engenharia da Computação, com foco em Front-End. Proficiente em HTML, CSS, JavaScript e React.js, tenho paixão por criar interfaces web elegantes e funcionais. Com habilidades em colaboração e aprendizado rápido, estou pronto para enfrentar desafios e contribuir para projetos inovadores. Conheça mais sobre mim e meu trabalho!</p>
+            <h1>Skills</h1>
+        </div>
+    </section>
+
+    <section id="projetos" class="py-5 hidden">
         <div class="container">
             <h2>Projetos</h2>
             <div class="row">
@@ -76,7 +84,7 @@
         </div>
     </section>
 
-    <section id="contato" class="py-5">
+    <section id="contato" class="py-5 hidden">
         <div class="container">
             <h2>Contato</h2>
             <form id="formulario-contato">
