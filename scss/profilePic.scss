@@ -28,9 +28,7 @@ $purple: #A020F0;
     display: flex;
 
     &:hover {
-        width: 25.5rem;
-        height: 25.5rem;
-
+        transform: scale(1.05);
     }
 
     a {

@@ -94,17 +94,40 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // observer API
 
+// const hiddenElements = document.querySelectorAll(".hidden")
+
+// const observer = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//         if (entry.isIntersecting){
+            
+//             entry.target.classList.add("show")
+//         }
+//     })
+// }, {
+//     threshold:0.5,
+// })
+
+// hiddenElements.forEach((element) => observer.observe(element))
+
+const hiddenElements = document.querySelectorAll(".hidden");
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        if (entry.isIntersecting){
-            entry.target.classList.add("show")
-        }else{
-            entry.target.classList.remove("show")
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        } else {
+            // Verifica se o elemento saiu pela parte inferior da viewport
+            const boundingClientRect = entry.boundingClientRect;
+            const rootBounds = entry.rootBounds;
+            // Se a parte inferior do elemento está acima da parte inferior da viewport, então ele saiu por baixo
+            if (boundingClientRect.bottom > rootBounds.bottom) {
+                entry.target.classList.remove("show");
+            }
         }
-    }, {
-        threshold: 1
-    })
-})
+    });
+}, {
+    threshold: 0.5,
+    rootMargin: "0px"
+});
 
-const hiddenElements = document.querySelectorAll(".hidden")
-hiddenElements.forEach((element) => observer.observe(element))
+hiddenElements.forEach((element) => observer.observe(element));

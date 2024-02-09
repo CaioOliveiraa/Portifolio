@@ -24,7 +24,7 @@ body{
 .hidden{
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-10%);
+    transform: translateX(-20%);
     transition: all 1.5s;
 }
 
@@ -95,103 +95,6 @@ header {
     align-items: center;
     flex-direction: column;
 }
-
-.btnMenu{
-    display: flex;
-    padding: .5rem 1rem;
-    font-size: 1rem;
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-
-#hamburger{
-    border-top: 2px solid;
-    width: 30px;
-    color: #A020F0;
-    transition: .3s;
-}
-
-.btnMenu:hover #hamburger{
-    width: 20px;
-}   
-
-#hamburger::after, #hamburger::before{
-    content: '';
-    display: block;
-    width: 30px;
-    height: 2px;
-    background-color: currentColor;
-    margin-top: 5px;
-    transition: .3s;
-    position: relative;
-}
-
-#nav.active #hamburger{
-border-top-color: transparent;
-}
-
-#nav.active #hamburger::before{
-    transform: rotate(135deg);
-}
-
-#nav.active #hamburger::after{
-    transform: rotate(-135deg);
-    top: -7px;
-}
-
-.switch {
-    font-size: 17px;
-    position: relative;
-    display: inline-block;
-    width: 3.5rem;
-    height: 2em;
-    margin-top: .5rem;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #A020F0;
-    transition: .4s;
-    border-radius: 10px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 1.4em;
-    width: 1.4em;
-    border-radius: 8px;
-    left: 0.3em;
-    bottom: 0.3em;
-    transform: rotate(270deg);
-    background-color: rgb(17, 17, 17);
-    transition: .4s;
-}
-
-.switch input:checked+.slider {
-    background-color: #fff;
-}
-
-.switch input:focus+.slider {
-    box-shadow: 0 0 1px #2196F3;
-}
-
-.switch input:checked+.slider:before {
-    transform: translateX(1.5em);
-}
-
 
 #title{
     max-width: 32rem;
@@ -276,5 +179,5 @@ border-top-color: transparent;
 }
 
 #projetos{
-    background-color: black;
+    background-color: #1c1c1c;
 }
