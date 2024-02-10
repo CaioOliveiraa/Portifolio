@@ -94,20 +94,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // observer API
 
-// const hiddenElements = document.querySelectorAll(".hidden")
-
-// const observer = new IntersectionObserver((entries) => {
-//     entries.forEach((entry) => {
-//         if (entry.isIntersecting){
-            
-//             entry.target.classList.add("show")
-//         }
-//     })
-// }, {
-//     threshold:0.5,
-// })
-
-// hiddenElements.forEach((element) => observer.observe(element))
 
 const hiddenElements = document.querySelectorAll(".hidden");
 

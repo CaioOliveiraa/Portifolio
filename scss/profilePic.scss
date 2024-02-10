@@ -21,8 +21,8 @@ $purple: #A020F0;
     padding: 6px;
     border-radius: 50%;
     position: relative;
-    width: 25rem;
-    height: 25rem;
+    width: 22rem;
+    height: 22rem;
     border-radius: 50%;
     transition: 0.3s ease;
     display: flex;
@@ -69,21 +69,21 @@ $purple: #A020F0;
 
 @keyframes animate-1 {
     0%, 100% {
-        box-shadow: createShadow(40, 13.5rem, #A020F0, 360deg);
+        box-shadow: createShadow(40, 11.5rem, #A020F0, 360deg);
     }
 
     50% {
-        box-shadow: createShadow(40, 13rem, #A020F0, 360deg);
+        box-shadow: createShadow(40, 12rem, #A020F0, 360deg);
     }
 }
 
 @keyframes animate-2 {
     0%, 100% {
-        box-shadow: createShadow(20, 13rem, #A020F0, 360deg);
+        box-shadow: createShadow(20, 12rem, #A020F0, 360deg);
     }
 
     50% {
-        box-shadow: createShadow(20, 13.5rem, #A020F0, 360deg);
+        box-shadow: createShadow(20, 11.5rem, #A020F0, 360deg);
     }
 }
 
