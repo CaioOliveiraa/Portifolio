@@ -53,6 +53,17 @@ function toggleMenu(event){
     nav.classList.toggle("active")
 }
 
+// Botões do menu
+
+const optionMenus = document.querySelectorAll(".optionMenu");
+
+optionMenus.forEach(optionMenu => {
+    optionMenu.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+});
+
+
 // switch theme
 
 const themeSwitch = document.getElementById('themeSwitch')
@@ -91,9 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
 // observer API
-
 
 const hiddenElements = document.querySelectorAll(".hidden");
 
@@ -117,3 +126,6 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 hiddenElements.forEach((element) => observer.observe(element));
+
+
+
