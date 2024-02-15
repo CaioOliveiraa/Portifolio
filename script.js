@@ -102,6 +102,33 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// Projects Cards 
+
+document.addEventListener("DOMContentLoaded", function() {
+    const projects = [
+        { name: "RideApp", image:"./assets/img/rideApp.png"},
+        { name: "MemoryGame", image:"./assets/img/memoryGame.png"},
+        { name: "MemoryGame", image:"./assets/img/memoryGame.png"},
+        
+    ];
+
+    const projectsCards = document.querySelector(".projectsCards");
+
+    projects.forEach(project => {
+        const card = document.createElement('div');
+        card.classList.add("projectCard");
+        card.innerHTML = `
+            <div class="projectName">${project.name}</div>
+            <img src="${project.image}" alt="${project.name}">
+        `;
+        projectsCards.appendChild(card);
+
+        const projectName = card.querySelector('.projectName');
+
+    });
+});
+
+
 // observer API
 
 const hiddenElements = document.querySelectorAll(".hidden");

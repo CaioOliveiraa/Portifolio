@@ -123,8 +123,7 @@ header {
 }
 
 #profileContainer{
-    padding-top: 10rem;
-    width: 100%;
+    padding-top: 15rem;
     height: 70vh;
 }
 
@@ -134,7 +133,6 @@ header {
     align-items: center;
     flex-direction: column;
     padding-top: 2rem;
-    background-color: aqua;
     margin-top: 5rem;
 }
 
@@ -152,11 +150,12 @@ header {
 
 #cardContainer{
     text-align: center;
-    margin-bottom: 10rem;
+    margin-bottom: 3rem;
 }
 
 #cardContainer h1{
     margin-bottom: 5rem ;
+    color: #fff;
 }
 
 .card {
@@ -182,6 +181,52 @@ header {
     margin-bottom: 10px;
 }
 
-#projetos{
-    background-color: #1c1c1c;
+#projectsContainer {
+    text-align: center;
+    padding-top: 7rem;
 }
+
+#projectsContainer h1 {
+    margin-bottom: 5rem;
+    color: #fff;
+}
+
+.projectCard {
+    position: relative; 
+    text-align: center;
+    margin: 1.5rem;
+    display: inline-block;
+    color: #fff;
+    transition: .5s;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.projectsCards img {
+    position: relative; 
+    width: 30rem;
+    filter: brightness(0.4) contrast(1.2);
+    transition: 0.5s;
+}
+
+.projectCard:hover img {
+    filter: none;
+    transform: scale(1.4);
+    z-index: 100;
+}
+
+.projectCard:hover .projectName {
+    opacity: 0;
+}
+
+.projectName {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.3s;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+}
+
