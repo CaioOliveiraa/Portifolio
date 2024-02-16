@@ -66,15 +66,22 @@ optionMenus.forEach(optionMenu => {
 
 // switch theme
 
-const themeSwitch = document.getElementById('themeSwitch')
+const themeSwitch = document.getElementById('themeSwitch');
 
-themeSwitch.addEventListener('change', function(){
-    if(this.checked){
-        document.body.classList.add('lightTheme');
-    }else{
-        document.body.classList.remove('lightTheme')
-    }
-})
+themeSwitch.addEventListener('change', function() {
+    const darkElements = document.querySelectorAll('.darkMode');
+    darkElements.forEach(element => {
+        if (this.checked) {
+            element.classList.add('lightMode');
+            element.classList.remove('darkMode');
+        } else {
+            element.classList.remove('lightMode');
+            element.classList.add('darkMode');
+        }
+    });
+});
+
+
 
 // Card creation
 
