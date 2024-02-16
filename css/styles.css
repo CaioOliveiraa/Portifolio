@@ -108,10 +108,33 @@ header {
 }
 
 #title h1{
+    white-space: nowrap;
+    overflow: hidden;
     text-align: left;
+    border-right: 2px solid #A020F0;
+    animation: cursor 600ms steps(40) infinite normal,
+        typing 3s steps(40) 1s normal ;
 }
 
-#title span{
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to{
+        width: 30.5rem;
+    }
+}
+
+@keyframes cursor {
+    from {
+        border-right-color: #A020F0
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+#title span {
     color: #A020F0;
 }
 
