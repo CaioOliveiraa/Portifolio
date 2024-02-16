@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const projects = [
         { name: "RideApp", image:"./assets/img/rideApp.png"},
         { name: "MemoryGame", image:"./assets/img/memoryGame.png"},
-        { name: "MemoryGame", image:"./assets/img/memoryGame.png"},
+        { name: "MemoryGame", image:"./assets/img/sistComun.png"},
         
     ];
 
