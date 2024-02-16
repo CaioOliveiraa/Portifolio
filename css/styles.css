@@ -113,7 +113,7 @@ header {
     text-align: left;
     border-right: 2px solid #A020F0;
     animation: cursor 600ms steps(40) infinite normal,
-        typing 3s steps(40) 1s normal ;
+        typing 3s steps(40) normal ;
 }
 
 @keyframes typing {
