@@ -260,7 +260,26 @@ header {
 
 
 
+
 @media only screen and (max-width: 768px) {
+    /* Remover animações */
+    #title h1 {
+        border-right: none;
+        animation: none;
+    }
+
+    /* Centralizar todo o conteúdo */
+    body, header, #profileContainer, #aboutContainer, #projectsContainer, #contactsContainer, footer {
+        text-align: center;
+    }
+
+    #profileContainer, #aboutContainer, #projectsContainer, #contactsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ajustar espaçamentos */
     body {
         padding-top: 6rem;
     }
@@ -268,59 +287,6 @@ header {
     header {
         padding-left: 1rem;
         padding-right: 1rem;
-    }
-
-    #nav {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    #profileContainer {
-        padding-top: 5rem;
-        height: auto;
-        position: relative;
-    }
-
-    .avatar {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1;
-    }
-
-    #title {
-        max-width: 32rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        text-align: center;
-        position: relative;
-        z-index: 0;
-    }
-
-    #title h1 {
-        white-space: nowrap;
-        overflow: hidden;
-        text-align: left;
-        border-right: 2px solid #A020F0;
-    }
-
-    #title span {
-        color: #A020F0;
-    }
-
-    #title p {
-        width: 500px;
-        color: #808080;
-        font-size: 1.2rem;
-        padding: 10px;
-    }
-
-    .avatar {
-        top: -5rem;
     }
 
     #menu {
@@ -336,7 +302,7 @@ header {
     }
 
     #about p {
-        margin: 1rem 1rem 5rem 1rem;
+        margin: 1rem;
     }
 
     #projectsContainer {
