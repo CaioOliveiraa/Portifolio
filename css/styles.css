@@ -262,12 +262,6 @@ header {
 
 
 @media only screen and (max-width: 768px) {
-    /* Remover animações */
-    #title h1 {
-        border-right: none;
-        animation: none;
-    }
-
     /* Centralizar todo o conteúdo */
     body, header, #profileContainer, #aboutContainer, #projectsContainer, #contactsContainer, footer {
         text-align: center;
@@ -281,7 +275,8 @@ header {
 
     /* Ajustar espaçamentos */
     body {
-        padding-top: 6rem;
+        /* padding-top: 6rem; */
+        margin: 0 2rem 0 2rem;
     }
 
     header {
@@ -289,8 +284,15 @@ header {
         padding-right: 1rem;
     }
 
+    .hidden{
+        opacity: 1;
+        filter: none;
+        transform: translateX(0);
+    }
+
     #menu {
         padding-top: 3rem;
+        backdrop-filter: blur(10px);
     }
 
     #menu li a {
@@ -301,8 +303,32 @@ header {
         top: 4rem;
     }
 
+    #title{
+        max-width: 10rem;
+        text-align:center; 
+        margin-right: 0;
+    }
+
+    #title h1{
+        font-size: 1.5rem;
+    }
+
+    @keyframes typing {
+        from{
+            width: 0;
+        }
+        to{
+            width: 18rem;
+        }
+    }
+
+    #title p{
+        font-size: 1rem;
+    }
+
     #about p {
-        margin: 1rem;
+        margin: 2rem;
+        font-size: 14px;
     }
 
     #projectsContainer {
