@@ -66,21 +66,18 @@ optionMenus.forEach(optionMenu => {
 
 // switch theme
 
-// const themeSwitch = document.getElementById('themeSwitch');
+const themeSwitch = document.getElementById('themeSwitch');
 
-// themeSwitch.addEventListener('change', function() {
-//     const darkElements = document.querySelectorAll('.darkMode');
-//     darkElements.forEach(element => {
-//         if (this.checked) {
-//             element.classList.add('lightMode');
-//             element.classList.remove('darkMode');
-//         } else {
-//             element.classList.remove('lightMode');
-//             element.classList.add('darkMode');
-//         }
-//     });
-// });
+themeSwitch.addEventListener("change", toggleTheme);
+themeSwitch.addEventListener('touchstart', toggleTheme)
 
+function toggleTheme(event) {
+    const elements = document.querySelectorAll(".darkMode, .lightMode");
+    elements.forEach(element => {
+        element.classList.toggle("darkMode");
+        element.classList.toggle("lightMode");
+    });
+}
 
 
 // Card creation

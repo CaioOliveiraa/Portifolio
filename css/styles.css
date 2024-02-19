@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body{
@@ -21,10 +20,6 @@ body{
     background-color: #fff;
     color: #333;
 }
-
-/* .lightTheme h1{
-    color: #333;
-} */
 
 .hidden{
     opacity: 0;
@@ -48,7 +43,6 @@ header {
     align-items: center;
     justify-content: space-between;
     background-color: rgb(17, 17, 17);
-    color: white;
     border-bottom: 0.1rem solid #A020F0;
     padding: 1rem;
     height: 4rem;
@@ -79,8 +73,8 @@ header {
 #menu li a{
     font-size: 1.6rem;
     font-weight: bold;
-    color: #fff;
     transition: 0.3s ease;
+    background: none;
 }
 
 #menu span{
@@ -108,7 +102,6 @@ header {
     justify-content: center;
     align-items: center;
     margin-right: 15rem;
-    color:#fff;
     text-align:justify;
 }
 
@@ -164,10 +157,6 @@ header {
     margin-top: 5rem;
 }
 
-#about h1{
-    color: #fff;
-}
-
 #about p{
     color: #808080;
     margin: 1rem 25rem 10rem 25rem;
@@ -183,7 +172,7 @@ header {
 
 #cardContainer h1{
     margin-bottom: 5rem ;
-    color: #fff;
+    /* color: #fff; */
 }
 
 .card {
@@ -197,6 +186,10 @@ header {
     display: inline-block;
     color: #A020F0;
     transition: .5s;
+}
+
+.lightMode .card {
+    background-color: #fff;
 }
 
 .card:hover{
@@ -216,7 +209,6 @@ header {
 
 #projectsContainer h1 {
     margin-bottom: 5rem;
-    color: #fff;
 }
 
 .projectCard {
@@ -296,7 +288,12 @@ header {
 
     #menu {
         padding-top: 3rem;
-        backdrop-filter: blur(10px);
+        background-color: #1c1c1c;
+        height: 100vh;
+    }
+
+    .lightMode #menu{
+        background-color: #fff ;
     }
 
     #menu li a {
