@@ -19,6 +19,7 @@ body{
 .lightMode {
     background-color: #fff;
     color: #333;
+
 }
 
 .hidden{
@@ -75,6 +76,7 @@ header {
     font-weight: bold;
     transition: 0.3s ease;
     background: none;
+    text-decoration: none;
 }
 
 #menu span{
@@ -172,7 +174,6 @@ header {
 
 #cardContainer h1{
     margin-bottom: 5rem ;
-    /* color: #fff; */
 }
 
 .card {
@@ -205,6 +206,7 @@ header {
 #projectsContainer {
     text-align: center;
     padding-top: 7rem;
+    margin-bottom: 3rem;
 }
 
 #projectsContainer h1 {
@@ -253,8 +255,26 @@ header {
     transition: opacity 0.3s;
     z-index: 1;
     backdrop-filter: blur(10px);
+    color: #fff;
 }
 
+#certContainer{
+    text-align: center;
+    padding-top: 7rem;
+}
+
+#certContainer h1{
+    margin-bottom: 5rem;
+}
+
+.carousel{
+    /* border: 2px solid #A020F0; */
+    margin: 0 15rem 0 15rem;
+}
+
+.carousel-item img {
+    width: 50rem;
+}
 
 
 

@@ -110,9 +110,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", function() {
     const projects = [
-        { name: "RideApp", image:"./assets/img/rideApp.png"},
-        { name: "MemoryGame", image:"./assets/img/memoryGame.png"},
-        { name: "CalcTelecom", image:"./assets/img/sistComun.png"},
+        { name: "RideApp", image:"./assets/img/rideApp.png", url:"https://github.com/CaioOliveiraa/AppRide"},
+        { name: "MemoryGame", image:"./assets/img/memoryGame.png", url:"https://github.com/CaioOliveiraa/MemoryGame"},
+        { name: "CalcTelecom", image:"./assets/img/sistComun.png", url:"https://github.com/CaioOliveiraa/calculadora-telecom"},
+        { name: "jogo Da Velha", image:"./assets/img/jogoDaVelha.png", url:"https://github.com/CaioOliveiraa/Tic-Tac_Toe"},
+
         
     ];
 
@@ -122,8 +124,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const card = document.createElement('div');
         card.classList.add("projectCard");
         card.innerHTML = `
-            <div class="projectName">${project.name}</div>
-            <img src="${project.image}" alt="${project.name}">
+            <a href="${project.url}" target="_blank">
+                <div class="projectName">${project.name}</div>
+                <img src="${project.image}" alt="${project.name}">
+            </a>
         `;
         projectsCards.appendChild(card);
 
