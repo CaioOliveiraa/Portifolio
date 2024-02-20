@@ -74,7 +74,7 @@ themeSwitch.addEventListener('touchstart', toggleTheme)
 function toggleTheme(event) {
     const elements = document.querySelectorAll(".darkMode, .lightMode");
     elements.forEach(element => {
-        element.classList.toggle("darkMode");
+        // element.classList.toggle("darkMode");
         element.classList.toggle("lightMode");
     });
 }

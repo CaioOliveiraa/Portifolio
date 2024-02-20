@@ -14,19 +14,20 @@ body{
 .darkMode {
     background-color: rgb(17, 17, 17);
     color: #fff;
+    transition: .75s;
 }
 
 .lightMode {
     background-color: #fff;
     color: #333;
-
+    /* transition: 0.5s; */
 }
 
 .hidden{
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-20%);
-    transition: all 1.5s;
+    transform: translateX(-15%);
+    transition: all .75s;
 }
 
 .show{
@@ -261,6 +262,7 @@ header {
 #certContainer{
     text-align: center;
     padding-top: 7rem;
+    margin-bottom: 3rem;
 }
 
 #certContainer h1{
@@ -275,6 +277,61 @@ header {
 .carousel-item img {
     width: 50rem;
 }
+
+.lightMode .carousel-control-prev-icon{
+    background-color: #1c1c1c;
+}
+
+.lightMode .carousel-control-next-icon{
+    background-color: #1c1c1c;
+}
+
+#contactsContainer{
+    text-align: center;
+    padding-top: 7rem;
+}
+
+#contactsContainer h1{
+    margin-bottom: 6rem;
+}
+
+#socialContainer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20rem;
+    gap: 5rem;
+}
+
+.socialLinks{
+    transition: .5s;
+}
+
+.socialLinks a{
+    text-decoration: none;
+    color: #808080;
+}
+
+.socialLinks a h5{
+    color: #fff;
+}
+
+.lightMode .socialLinks a h5{
+    color: #333;
+}
+
+.socialLinks img{
+    width: 3rem;
+    margin-bottom: 1rem;
+}
+
+.socialLinks:hover{
+    transform: scale(1.2);
+}
+
+footer{
+    background-color: #A020F0;
+}
+
 
 
 
