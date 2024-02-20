@@ -427,9 +427,16 @@ footer{
         width: 20rem;
     }
 
-    .socialLinks{
-        word-wrap: break-word;
-        overflow-wrap: break-word;
+    #socialContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .socialLinks {
+        font-size: 0rem;
+        padding: 10px;
+        box-sizing: border-box;
     }
 
 }
