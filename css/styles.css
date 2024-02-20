@@ -434,9 +434,10 @@ footer{
     }
 
     .socialLinks {
-        font-size: 0rem;
+        /* font-size: 0rem; */
         padding: 10px;
         box-sizing: border-box;
     }
+    
 
 }
