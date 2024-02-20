@@ -426,4 +426,10 @@ footer{
     .projectsCards img {
         width: 20rem;
     }
+
+    .socialLinks{
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
 }
