@@ -96,7 +96,6 @@ $purple: #A020F0;
         transition: 0.3s ease;
         display: flex;
         margin-bottom: 2rem;
-        z-index: 2; // Garantir que a imagem de perfil esteja acima do título
 
         &::before,
         &::after {
