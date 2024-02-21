@@ -334,6 +334,7 @@ footer {
 
 /* Media queries para dispositivos móveis */
 @media only screen and (max-width: 768px) {
+
     /* Centralizar todo o conteúdo */
     body,
     footer {
