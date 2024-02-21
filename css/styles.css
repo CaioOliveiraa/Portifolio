@@ -332,6 +332,11 @@ footer {
     background-color: #A020F0;
 }
 
+footer p{
+    color: #fff;
+}
+
+
 /* Media queries para dispositivos móveis */
 @media only screen and (max-width: 768px) {
 
@@ -449,11 +454,15 @@ footer {
     }
 
     footer{
-        background-color: rgb(17, 17, 17);
+        background-color: transparent;
     }
 
     footer p{
         margin-bottom: 3rem;   
+    }
+
+    .lightMode footer p{
+        color: #1c1c1c;
     }
 
 }
