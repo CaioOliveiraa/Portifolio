@@ -1,14 +1,18 @@
+/* Importação da fonte */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500&display=swap');
 
-*{
-    font-family: 'Montserrat',Arial, sans-serif;
+/* Reset de estilos */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(17, 17, 17) ;
+/* Estilos globais */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: rgb(17, 17, 17);
+    color: #fff;
 }
 
 .darkMode {
@@ -20,22 +24,22 @@ body{
 .lightMode {
     background-color: #fff;
     color: #333;
-    /* transition: 0.5s; */
 }
 
-.hidden{
+.hidden {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-15%);
     transition: all .75s;
 }
 
-.show{
+.show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
 }
 
+/* Estilos do cabeçalho */
 header {
     position: fixed;
     top: 0;
@@ -48,49 +52,51 @@ header {
     border-bottom: 0.1rem solid #A020F0;
     padding: 1rem;
     height: 4rem;
-    z-index: 999;   
+    z-index: 999;
     padding-left: 8rem;
     padding-right: 8rem;
 }
 
-#menu{
+/* Estilos do menu */
+#menu {
     display: none;
     height: 100vh;
     position: absolute;
     width: 100%;
     top: 0;
     right: 0rem;
-    background-color: rgb(17, 17, 17, 0.25);
+    background-color: rgba(17, 17, 17, 0.25);
     backdrop-filter: blur(10px);
     transition: .6s;
     z-index: 1000;
     padding-top: 4rem;
 }
 
-#menu li{
+#menu li {
     list-style: none;
     margin-top: 1rem;
 }
 
-#menu li a{
+#menu li a {
     font-size: 1.6rem;
     font-weight: bold;
     transition: 0.3s ease;
-    background: none;
+    /* color: #808080; */
     text-decoration: none;
+    background-color: transparent;
 }
 
-#menu span{
+#menu span {
     color: #A020F0;
 }
 
-#menu li a:hover{
+#menu li a:hover {
     color: #A020F0;
     text-decoration: none;
     letter-spacing: 0.1rem;
 }
 
-#nav.active #menu{
+#nav.active #menu {
     top: 4rem;
     display: flex;
     justify-content: top;
@@ -98,30 +104,30 @@ header {
     flex-direction: column;
 }
 
-#title{
+/* Estilos do título */
+#title {
     max-width: 32rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-right: 15rem;
-    text-align:justify;
+    text-align: justify;
 }
 
-#title h1{
+#title h1 {
     white-space: nowrap;
     overflow: hidden;
     text-align: left;
     border-right: 2px solid #A020F0;
-    animation: cursor 600ms steps(40) infinite normal,
-        typing 3s steps(40) .1s normal ;
+    animation: cursor 600ms steps(40) infinite normal, typing 3s steps(40) .1s normal;
 }
 
 @keyframes typing {
-    from{
+    from {
         width: 0;
     }
-    to{
+    to {
         width: 31rem;
     }
 }
@@ -139,19 +145,21 @@ header {
     color: #A020F0;
 }
 
-#title p{
+#title p {
     width: 500px;
     color: #808080;
     font-size: 1.2rem;
     padding: 10px;
 }
 
-#profileContainer{
+/* Estilos do perfil */
+#profileContainer {
     padding-top: 15rem;
     height: 70vh;
 }
 
-#about{
+/* Estilos sobre */
+#about {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -160,21 +168,18 @@ header {
     margin-top: 5rem;
 }
 
-#about p{
+#about p {
     color: #808080;
     margin: 1rem 25rem 10rem 25rem;
-    font-size: 16px; 
-    line-height: 1.5; 
-    text-align: center; 
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
 }
 
-#cardContainer{
+/* Estilos dos cartões */
+#cardContainer {
     text-align: center;
     margin-bottom: 3rem;
-}
-
-#cardContainer h1{
-    margin-bottom: 5rem ;
 }
 
 .card {
@@ -194,7 +199,7 @@ header {
     background-color: #fff;
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.1);
 }
 
@@ -204,18 +209,15 @@ header {
     margin-bottom: 10px;
 }
 
+/* Estilos dos projetos */
 #projectsContainer {
     text-align: center;
     padding-top: 7rem;
     margin-bottom: 3rem;
 }
 
-#projectsContainer h1 {
-    margin-bottom: 5rem;
-}
-
 .projectCard {
-    position: relative; 
+    position: relative;
     text-align: center;
     margin: 1.5rem;
     display: inline-block;
@@ -228,11 +230,10 @@ header {
 }
 
 .projectsCards img {
-    position: relative; 
+    position: relative;
     width: 30rem;
     filter: brightness(0.4) contrast(1.2);
     transition: 0.5s;
-    border-radius: 20px;
     border-radius: .6rem;
 }
 
@@ -259,18 +260,18 @@ header {
     color: #fff;
 }
 
-#certContainer{
+/* Estilos dos certificados */
+#certContainer {
     text-align: center;
     padding-top: 7rem;
     margin-bottom: 3rem;
 }
 
 #certContainer h1{
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
-.carousel{
-    /* border: 2px solid #A020F0; */
+.carousel {
     margin: 0 15rem 0 15rem;
 }
 
@@ -278,73 +279,73 @@ header {
     width: 50rem;
 }
 
-.lightMode .carousel-control-prev-icon{
+.lightMode .carousel-control-prev-icon,
+.lightMode .carousel-control-next-icon {
     background-color: #1c1c1c;
 }
 
-.lightMode .carousel-control-next-icon{
-    background-color: #1c1c1c;
-}
-
-#contactsContainer{
+/* Estilos dos contatos */
+#contactsContainer {
     text-align: center;
     padding-top: 7rem;
 }
 
-#contactsContainer h1{
+#contactsContainer h1 {
     margin-bottom: 6rem;
 }
 
-#socialContainer{
+#socialContainer {
     display: flex;
     justify-content: center;
-    margin-bottom: 20rem;
+    margin-bottom: 15rem;
     gap: 5rem;
 }
 
-.socialLinks{
+.socialLinks {
     transition: .5s;
 }
 
-.socialLinks a{
+.socialLinks a {
     text-decoration: none;
     color: #808080;
 }
 
-.socialLinks a h5{
+.socialLinks a h5 {
     color: #fff;
 }
 
-.lightMode .socialLinks a h5{
+.lightMode .socialLinks a h5 {
     color: #333;
 }
 
-.socialLinks img{
+.socialLinks img {
     width: 3rem;
     margin-bottom: 1rem;
 }
 
-.socialLinks:hover{
+.socialLinks:hover {
     transform: scale(1.2);
 }
 
-footer{
+/* Estilos do rodapé */
+footer {
     background-color: #A020F0;
 }
 
-
-
-
+/* Media queries para dispositivos móveis */
 @media only screen and (max-width: 768px) {
     /* Centralizar todo o conteúdo */
-    body, header, #profileContainer, #aboutContainer, #projectsContainer, #contactsContainer, footer {
+    body,
+    footer {
         text-align: center;
     }
 
-    #profileContainer, #aboutContainer, #projectsContainer, #contactsContainer {
+    #profileContainer{
+        /* width: 100%; */
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     body {
@@ -357,7 +358,7 @@ footer{
         padding-right: 1rem;
     }
 
-    .hidden{
+    .hidden {
         opacity: 1;
         filter: none;
         transform: translateX(0);
@@ -369,8 +370,8 @@ footer{
         height: 100vh;
     }
 
-    .lightMode #menu{
-        background-color: #fff ;
+    .lightMode #menu {
+        background-color: #fff;
     }
 
     #menu li a {
@@ -381,30 +382,30 @@ footer{
         top: 4rem;
     }
 
-    #title{
-        text-align:center; 
+    #title {
+        text-align: center;
         margin: 5rem 2rem 8rem 2rem;
     }
 
-    #title h1{
+    #title h1 {
         font-size: 1.8rem;
     }
 
     @keyframes typing {
-        from{
+        from {
             width: 0;
         }
-        to{
+        to {
             width: 22rem;
         }
     }
 
-    #title p{
+    #title p {
         font-size: 1rem;
     }
 
     #about {
-        margin-top: 15rem ;
+        margin-top: 15rem;
     }
 
     #about p {
@@ -422,22 +423,36 @@ footer{
         padding-top: 5rem;
     }
 
-
     .projectsCards img {
         width: 20rem;
+    }
+
+    .carousel{
+        margin: 0rem;
+    }
+
+    .carousel-item img {
+        width: 100%;
     }
 
     #socialContainer {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin-bottom: 10rem;
     }
 
     .socialLinks {
-        /* font-size: 0rem; */
         padding: 10px;
         box-sizing: border-box;
     }
-    
+
+    footer{
+        background-color: rgb(17, 17, 17);
+    }
+
+    footer p{
+        margin-bottom: 3rem;   
+    }
 
 }
