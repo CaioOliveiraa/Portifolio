@@ -115,7 +115,7 @@ header {
     text-align: justify;
 }
 
-#title h1 {
+#title h2 {
     white-space: nowrap;
     overflow: hidden;
     text-align: left;
@@ -267,7 +267,7 @@ header {
     margin-bottom: 3rem;
 }
 
-#certContainer h1{
+#certContainer h2{
     margin-bottom: 2rem;
 }
 
@@ -290,7 +290,7 @@ header {
     padding-top: 7rem;
 }
 
-#contactsContainer h1 {
+#contactsContainer h2 {
     margin-bottom: 6rem;
 }
 
@@ -393,7 +393,7 @@ footer p{
         margin: 5rem 2rem 8rem 2rem;
     }
 
-    #title h1 {
+    #title h2 {
         font-size: 1.8rem;
     }
 
