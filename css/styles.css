@@ -115,7 +115,7 @@ header {
     text-align: justify;
 }
 
-#title h2 {
+#title h1 {
     white-space: nowrap;
     overflow: hidden;
     text-align: left;
@@ -393,7 +393,7 @@ footer p{
         margin: 5rem 2rem 8rem 2rem;
     }
 
-    #title h2 {
+    #title h1 {
         font-size: 1.8rem;
     }
 
