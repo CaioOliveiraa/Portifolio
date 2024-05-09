@@ -28,7 +28,7 @@ function callback() {
 function downloadCV() {
     const CV = "Curriculo_CaioMonteiro.pdf";
     const pdfUrl = "assets/Curriculo_CaioMonteiro.pdf";
-    
+
     var link = document.createElement('a');
     link.href = pdfUrl;
     link.download = CV;
@@ -47,8 +47,8 @@ function downloadCV() {
 btnMenu.addEventListener('click', toggleMenu);
 btnMenu.addEventListener('touchstart', toggleMenu)
 
-function toggleMenu(event){
-    if(event.type === 'touchstart') event.preventDefault()
+function toggleMenu(event) {
+    if (event.type === 'touchstart') event.preventDefault()
     const nav = document.getElementById("nav")
     nav.classList.toggle("active")
 }
@@ -82,18 +82,18 @@ function toggleTheme(event) {
 
 // Card creation
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const languages = [
         { name: "HTML", image: "./assets/img/html.png" },
         { name: "CSS", image: "./assets/img/css.png" },
         { name: "JavaScript", image: "./assets/img/js.png" },
-        { name: "React.js", image:"./assets/img/react.png"},
-        { name: "Python", image:"./assets/img/python.png"},
-        { name: "Node.js", image:"./assets/img/nd-js.png"},
-        { name: "MongoDB", image:"./assets/img/mongodb.png"},
+        { name: "React.js", image: "./assets/img/react.png" },
+        { name: "Python", image: "./assets/img/python.png" },
+        { name: "Node.js", image: "./assets/img/nd-js.png" },
+        { name: "MongoDB", image: "./assets/img/mongodb.png" },
     ];
 
-    const cardContainer = document.querySelector(".cards"); 
+    const cardContainer = document.querySelector(".cards");
 
     languages.forEach(language => {
         const card = document.createElement("div");
@@ -108,14 +108,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Projects Cards 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const projects = [
-        { name: "RideApp", image:"./assets/img/rideApp.png", url:"https://github.com/CaioOliveiraa/AppRide"},
-        { name: "MemoryGame", image:"./assets/img/memoryGame.png", url:"https://github.com/CaioOliveiraa/MemoryGame"},
-        { name: "CalcTelecom", image:"./assets/img/sistComun.png", url:"https://github.com/CaioOliveiraa/calculadora-telecom"},
-        { name: "jogo Da Velha", image:"./assets/img/jogoDaVelha.png", url:"https://github.com/CaioOliveiraa/Tic-Tac_Toe"},
+        { name: "RideApp", image: "./assets/img/rideApp.png", url: "https://github.com/CaioOliveiraa/AppRide" },
+        { name: "MemoryGame", image: "./assets/img/memoryGame.png", url: "https://github.com/CaioOliveiraa/MemoryGame" },
+        { name: "CalcTelecom", image: "./assets/img/sistComun.png", url: "https://github.com/CaioOliveiraa/calculadora-telecom" },
+        { name: "jogo Da Velha", image: "./assets/img/jogoDaVelha.png", url: "https://github.com/CaioOliveiraa/Tic-Tac_Toe" },
+        { name: "NoticePortal", image: "./assets/img/noticePortal.png", url: "https://github.com/CaioOliveiraa/NoticePortal" },
+        { name: "Cryptography", image: "./assets/img/criptografia.png", url: "https://github.com/CaioOliveiraa/DesafioModalGR/tree/main/questão1_Criptografia" }
 
-        
     ];
 
     const projectsCards = document.querySelector(".projectsCards");

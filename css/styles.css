@@ -13,12 +13,12 @@ body {
     font-family: 'Montserrat', Arial, sans-serif;
     background-color: rgb(17, 17, 17);
     color: #fff;
+    transition: background-color .75s, color .75s;
 }
 
 .darkMode {
     background-color: rgb(17, 17, 17);
     color: #fff;
-    transition: .75s;
 }
 
 .lightMode {
@@ -30,7 +30,7 @@ body {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-15%);
-    transition: all .75s;
+    transition: opacity .75s, filter .75s, transform .75s;
 }
 
 .show {
@@ -50,11 +50,9 @@ header {
     justify-content: space-between;
     background-color: rgb(17, 17, 17);
     border-bottom: 0.1rem solid #A020F0;
-    padding: 1rem;
+    padding: 1rem 8rem;
     height: 4rem;
     z-index: 999;
-    padding-left: 8rem;
-    padding-right: 8rem;
 }
 
 /* Estilos do menu */
@@ -80,10 +78,8 @@ header {
 #menu li a {
     font-size: 1.6rem;
     font-weight: bold;
-    transition: 0.3s ease;
-    /* color: #808080; */
+    transition: color 0.3s ease;
     text-decoration: none;
-    background-color: transparent;
 }
 
 #menu span {
@@ -336,18 +332,16 @@ footer p{
     color: #fff;
 }
 
-
-/* Media queries para dispositivos móveis */
-@media only screen and (max-width: 768px) {
-
-    /* Centralizar todo o conteúdo */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
     body,
     footer {
-        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 5rem;
     }
 
-    #profileContainer{
-        /* width: 100%; */
+    #profileContainer {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -355,7 +349,6 @@ footer p{
     }
 
     body {
-        margin: 0 2rem 0 2rem;
         width: 100%;
     }
 
@@ -433,7 +426,7 @@ footer p{
         width: 20rem;
     }
 
-    .carousel{
+    .carousel {
         margin: 0rem;
     }
 
@@ -453,16 +446,141 @@ footer p{
         box-sizing: border-box;
     }
 
-    footer{
+    footer {
         background-color: transparent;
     }
 
-    footer p{
-        margin-bottom: 3rem;   
+    footer p {
+        margin-bottom: 3rem;
     }
 
-    .lightMode footer p{
+    .lightMode footer p {
         color: #1c1c1c;
     }
+}
 
+/* Media queries para dispositivos móveis */
+@media only screen and (max-width: 768px) and (max-width: 1024px) {
+    body,
+    footer {
+        text-align: center;
+        padding: 5rem;
+    }
+
+    #profileContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body {
+        width: 100%;
+    }
+
+    header {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hidden {
+        opacity: 1;
+        filter: none;
+        transform: translateX(0);
+    }
+
+    #menu {
+        padding-top: 3rem;
+        background-color: #1c1c1c;
+        height: 100vh;
+    }
+
+    .lightMode #menu {
+        background-color: #fff;
+    }
+
+    #menu li a {
+        font-size: 1.4rem;
+    }
+
+    #nav.active #menu {
+        top: 4rem;
+    }
+
+    #title {
+        text-align: center;
+        margin: 5rem 2rem 8rem 2rem;
+    }
+
+    #title h1 {
+        font-size: 1.8rem;
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 22rem;
+        }
+    }
+
+    #title p {
+        font-size: 1rem;
+    }
+
+    #about {
+        margin-top: 15rem;
+    }
+
+    #about p {
+        margin: 2rem 0rem 5rem 0rem;
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .card {
+        padding: 20px;
+        width: 10rem;
+    }
+
+    #projectsContainer {
+        padding-top: 5rem;
+    }
+
+    .projectsCards img {
+        width: 20rem;
+    }
+
+    .carousel {
+        margin: 0rem;
+    }
+
+    .carousel-item img {
+        width: 100%;
+    }
+
+    #socialContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10rem;
+    }
+
+    .socialLinks {
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    footer {
+        background-color: transparent;
+    }
+
+    footer p {
+        margin-bottom: 3rem;
+    }
+
+    .lightMode footer p {
+        color: #1c1c1c;
+    }
 }
