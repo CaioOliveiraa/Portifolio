@@ -87,10 +87,14 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: "HTML", image: "./assets/img/html.png" },
         { name: "CSS", image: "./assets/img/css.png" },
         { name: "JavaScript", image: "./assets/img/js.png" },
+        { name: "TypeScript", image: "./assets/img/ts.png"},
         { name: "React.js", image: "./assets/img/react.png" },
         { name: "Python", image: "./assets/img/python.png" },
         { name: "Node.js", image: "./assets/img/nd-js.png" },
+        { name: ".NET", image: "./assets/img/net.png" },
+        { name: "C#", image: "./assets/img/cSharp.png" },
         { name: "MongoDB", image: "./assets/img/mongodb.png" },
+        { name: "PostgreSQL", image: "./assets/img/postgres.png" },
     ];
 
     const cardContainer = document.querySelector(".cards");
