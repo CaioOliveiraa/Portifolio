@@ -748,6 +748,8 @@ footer p {
         background-color: var(--gray-dark);
         height: 100vh;
         width: 100%;
+        top: 0;
+        left: 0;
     }
 
     .lightMode #menu {
@@ -786,7 +788,7 @@ footer p {
     }
 
     #about {
-        margin-top: 15rem;
+        margin-top: 30rem;
     }
 
     #about p {
