@@ -465,6 +465,7 @@ section * {
 .btn-project {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     gap: .5rem;
 }
@@ -706,6 +707,16 @@ footer p {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-color: blueviolet;
+    }
+
+    #title h1 {
+        white-space: wrap;
+    }
+
+    #title p {
+        width: 250px;
+        font-size: 1rem;
     }
 
     body {
@@ -777,13 +788,13 @@ footer p {
     .card {
         padding: 20px;
         border-radius: 1rem 1rem 1rem 3rem;
-        width: 7rem;
-        height: 7rem;
+        width: 5rem;
+        height: 5rem;
         font-size: .1rem;
     }
 
     .card h5 {
-        font-size: 0.8rem;
+        display: none;
     }
 
     .card img {
@@ -793,6 +804,17 @@ footer p {
 
     #projectsContainer {
         padding-top: 5rem;
+    }
+
+    .btn-project {
+        flex-direction: column;
+        /* empilha os botões */
+        gap: 1rem;
+    }
+
+    .btn-project a {
+        width: 100%;
+        /* faz os botões terem mesma largura */
     }
 
     .projectsCards img {
