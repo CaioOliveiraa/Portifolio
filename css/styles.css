@@ -707,7 +707,16 @@ footer p {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: blueviolet;
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 5rem;
+        }
     }
 
     #title h1 {
@@ -738,6 +747,7 @@ footer p {
         padding-top: 3rem;
         background-color: var(--gray-dark);
         height: 100vh;
+        width: 100%;
     }
 
     .lightMode #menu {
@@ -763,11 +773,11 @@ footer p {
 
     @keyframes typing {
         from {
-            width: 0;
+            width: 0rem;
         }
 
         to {
-            width: 22rem;
+            width: 18rem;
         }
     }
 
@@ -839,6 +849,14 @@ footer p {
     .socialLinks {
         padding: 10px;
         box-sizing: border-box;
+        width: 5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .socialLinks h5 {
+        font-size: 1rem;
+        text-align: center;
     }
 
     footer {
