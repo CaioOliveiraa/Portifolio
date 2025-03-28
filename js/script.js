@@ -84,17 +84,17 @@ function toggleTheme(event) {
 
 document.addEventListener("DOMContentLoaded", function () {
     const languages = [
-        { name: "HTML", image: "./assets/images/html.png" },
-        { name: "CSS", image: "./assets/images/css.png" },
-        { name: "JavaScript", image: "./assets/images/js.png" },
-        { name: "TypeScript", image: "./assets/images/ts.png"},
-        { name: "React", image: "./assets/images/react.png" },
-        { name: "Node.js", image: "./assets/images/nd-js.png" },
-        { name: ".NET", image: "./assets/images/net.png" },
-        { name: "C#", image: "./assets/images/cSharp.png" },
-        { name: "MongoDB", image: "./assets/images/mongodb.png" },
-        { name: "PostgreSQL", image: "./assets/images/postgres.png" },
-        { name: "Python", image: "./assets/images/python.png" },
+        { name: "HTML", image: "./assets/images/techs/html.png" },
+        { name: "CSS", image: "./assets/images/techs/css.png" },
+        { name: "JavaScript", image: "./assets/images/techs/js.png" },
+        { name: "TypeScript", image: "./assets/images/techs/ts.png"},
+        { name: "React", image: "./assets/images/techs/react.png" },
+        { name: "Node.js", image: "./assets/images/techs/nd-js.png" },
+        { name: ".NET", image: "./assets/images/techs/net.png" },
+        { name: "C#", image: "./assets/images/techs/cSharp.png" },
+        { name: "MongoDB", image: "./assets/images/techs/mongodb.png" },
+        { name: "PostgreSQL", image: "./assets/images/techs/postgres.png" },
+        { name: "Python", image: "./assets/images/techs/python.png" },
     ];
 
     const cardContainer = document.querySelector(".cards");

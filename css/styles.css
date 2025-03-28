@@ -718,6 +718,13 @@ footer p {
         transform: translateX(0);
     }
 
+    #profileContainer,
+    #contactsContainer,
+    #projectsContainer,
+    #certContainer {
+        margin-top: 10rem;
+    }
+
     #menu {
         padding-top: 3rem;
         background-color: var(--gray-dark);
@@ -777,7 +784,7 @@ footer p {
     }
 
     #about {
-        margin-top: 30rem;
+        margin-top: 20rem;
     }
 
     #about p {
