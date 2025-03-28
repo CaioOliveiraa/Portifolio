@@ -702,31 +702,6 @@ footer p {
         padding: 4rem;
     }
 
-    #profileContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    @keyframes typing {
-        from {
-            width: 0;
-        }
-
-        to {
-            width: 5rem;
-        }
-    }
-
-    #title h1 {
-        white-space: wrap;
-    }
-
-    #title p {
-        width: 250px;
-        font-size: 1rem;
-    }
 
     body {
         width: 100%;
@@ -756,12 +731,24 @@ footer p {
         background-color: var(--bg-light);
     }
 
+    #menu h1 {
+        margin-right: 2rem;
+    }
+
     #menu li a {
         font-size: 1.4rem;
+        margin-right: 2rem;
     }
 
     #nav.active #menu {
         top: 4rem;
+    }
+
+    #profileContainer {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
     }
 
     #title {
@@ -771,6 +758,7 @@ footer p {
 
     #title h1 {
         font-size: 1.8rem;
+        white-space: wrap;
     }
 
     @keyframes typing {
@@ -779,11 +767,12 @@ footer p {
         }
 
         to {
-            width: 18rem;
+            width: 16rem;
         }
     }
 
     #title p {
+        width: 250px;
         font-size: 1rem;
     }
 
