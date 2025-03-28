@@ -1,2 +1,6 @@
-@import './buttons.scss';
-@import './profilePic.scss';
+// global.scss
+@use 'buttons';
+@use 'profilePic';
+// ... outros
+
+// compile para: css/main.css

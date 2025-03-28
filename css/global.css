@@ -1,85 +1,66 @@
 @charset "UTF-8";
 /* ===============================
-Estilos Gerais - Portfólio Caio Oliveira
-=============================== */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500&display=swap");
-/* ===============================
    Estilos Gerais - Portfólio Caio Oliveira
    =============================== */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500&display=swap");
-:root {
-  --primary: #A020F0;
-  --bg-dark: #111;
-  --bg-light: #fff;
-  --text-light: #fff;
-  --text-dark: #333;
-  --gray: #808080;
-  --card-dark: #1c1c1c;
-}
-
-/* ===============================
-    Botão de Download CV
-    =============================== */
 .btnCV {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   height: 2.5rem;
-  text-align: center;
+  width: 10rem;
   border-radius: 2rem;
-  background-color: var(--primary);
-  border: 2px solid var(--primary);
-  color: white;
-  letter-spacing: 1px;
-  font-size: 12px;
-  font-weight: bold;
-  text-decoration: none;
+  background: #A020F0;
+  border: 2px solid #A020F0;
   cursor: pointer;
   transition: all 0.25s ease;
-  position: relative;
+  overflow: hidden;
 }
-
-.btnCV:hover {
-  background-color: var(--bg-dark);
+.btnCV::after {
+  content: "Download CV";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
   color: white;
-  text-decoration: none;
+  letter-spacing: 1px;
 }
-
-.btnCV:active {
+.btnCV:hover {
+  background: rgb(17, 17, 17);
+}
+.btnCV:hover::after {
+  color: white;
+}
+.btnCV:active::after {
   letter-spacing: 2px;
 }
 
-.btnCV::after {
-  content: "Download CV";
-}
-
-/* ===============================
-    Botão Carregando
-    =============================== */
 .onclick {
-  background-color: var(--bg-dark);
+  background: rgb(17, 17, 17);
   width: 40px;
-  border: 8px solid var(--bg-dark);
-  border-left-color: var(--primary);
+  border-color: rgb(17, 17, 17);
+  border-width: 8px;
   font-size: 0;
+  border-left-color: #A020F0;
   animation: rotating 2s 0.25s linear infinite;
 }
-
-.onclick::after {
+.onclick:after {
   content: "";
 }
-
 .onclick:hover {
-  color: var(--primary);
+  color: #A020F0;
 }
 
 .validate {
   font-size: 15px;
   color: white;
-  background: var(--primary);
+  background: #A020F0;
 }
-
-.validate::after {
+.validate:after {
   content: "\f00c";
   font-family: "FontAwesome";
 }
@@ -92,9 +73,6 @@ Estilos Gerais - Portfólio Caio Oliveira
     transform: rotate(360deg);
   }
 }
-/* ===============================
-    Botão do Menu Hamburguer
-    =============================== */
 .btnMenu {
   display: flex;
   padding: 0.5rem 1rem;
@@ -107,12 +85,10 @@ Estilos Gerais - Portfólio Caio Oliveira
 #hamburger {
   border-top: 2px solid;
   width: 30px;
-  color: var(--primary);
+  color: #A020F0;
   transition: 0.3s;
 }
-
-#hamburger::before,
-#hamburger::after {
+#hamburger::after, #hamburger::before {
   content: "";
   display: block;
   width: 30px;
@@ -122,27 +98,20 @@ Estilos Gerais - Portfólio Caio Oliveira
   transition: 0.3s;
   position: relative;
 }
-
 #nav.active #hamburger {
   border-top-color: transparent;
 }
-
 #nav.active #hamburger::before {
   transform: rotate(135deg);
 }
-
 #nav.active #hamburger::after {
   transform: rotate(-135deg);
   top: -7px;
 }
-
 .btnMenu:hover #hamburger {
   width: 20px;
 }
 
-/* ===============================
-    Switch de Tema
-    =============================== */
 .switch {
   font-size: 17px;
   position: relative;
@@ -151,13 +120,11 @@ Estilos Gerais - Portfólio Caio Oliveira
   height: 2em;
   margin-top: 0.5rem;
 }
-
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-
 .switch .slider {
   position: absolute;
   cursor: pointer;
@@ -165,12 +132,11 @@ Estilos Gerais - Portfólio Caio Oliveira
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--primary);
+  background-color: #A020F0;
   transition: 0.4s;
   border-radius: 10px;
 }
-
-.switch .slider::before {
+.switch .slider:before {
   position: absolute;
   content: "";
   height: 1.4em;
@@ -179,19 +145,16 @@ Estilos Gerais - Portfólio Caio Oliveira
   left: 0.3em;
   bottom: 0.3em;
   transform: rotate(270deg);
-  background-color: var(--bg-dark);
+  background-color: rgb(17, 17, 17);
   transition: 0.4s;
 }
-
 .switch input:checked + .slider {
   background-color: #fff;
 }
-
 .switch input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
-
-.switch input:checked + .slider::before {
+.switch input:checked + .slider:before {
   transform: translateX(1.5em);
 }
 
@@ -415,4 +378,4 @@ Estilos Gerais - Portfólio Caio Oliveira
   transform: translateX(1.5em);
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=global.css.map */

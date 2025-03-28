@@ -1,79 +1,203 @@
 <!DOCTYPE html>
-<html class="h-100" lang="en">
+<html lang="pt-br" class="h-100">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio | Caio Oliveira</title>
+    <link rel="icon" type="image/png" href="./assets/images/favicon.svg">
+
+    <!-- Estilos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="main.css">
-    <title>Portifólio | Caio Oliveira</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <!-- <link rel="stylesheet" href="css/global.css" />-->
+
+
+    <!-- Partículas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 </head>
 
+
 <body class="h-100 darkMode">
+    <div id="particles-js"></div>
     <header>
         <nav id="nav">
-            <a class="btnMenu">
-                <span id="hamburger"></span>
-            </a>
+            <a class="btnMenu"><span id="hamburger"></span></a>
             <ul id="menu">
                 <h1><span>Menu</span></h1>
-                <li><a class="optionMenu darkMode" href="#aboutContainer">Sobre</a></li>
-                <li><a class="optionMenu darkMode" href="#projectsContainer">Projetos</a></li>
-                <li><a class="optionMenu darkMode" href="#certContainer">Certificados</a></li>
-                <li><a class="optionMenu darkMode" href="#contactsContainer">Contato</a></li>
+                <li><a class="optionMenu" href="#aboutContainer">Sobre</a></li>
+                <li><a class="optionMenu" href="#projectsContainer">Projetos</a></li>
+                <li><a class="optionMenu" href="#certContainer">Certificados</a></li>
+                <li><a class="optionMenu" href="#contactsContainer">Contato</a></li>
             </ul>
-
         </nav>
         <label class="switch">
-            <input type="checkbox" id="themeSwitch">
+            <input type="checkbox" id="themeSwitch" />
             <span class="slider"></span>
         </label>
     </header>
 
-    <section id="profileContainer" class=" d-flex justify-content-center align-items-center m-5 darkMode">
+    <!-- Perfil -->
+    <section id="profileContainer" class="d-flex justify-content-center align-items-center">
+
         <div id="title">
             <h1>Olá, eu sou <span>Caio Oliveira</span></h1>
-            <p>Estudante de Engenharia da computação (9/10) | Desenvolvedor Front end</p> 
-            <a
-                href="#"
-                class="btnCV"
-                >
+            <p>Desenvolvedor Fullstack | TypeScript | ReactJs | NodeJs | MongoDB | PostgreSQL</p>
+            <a href="#" class="btnCV"></a>
+        </div>
+        <div class="avatar d-flex justify-content-center">
+            <a href="https://github.com/CaioOliveiraa" target="_blank">
+                <img src="assets/images/perfilLight.png" alt="Foto de perfil" />
             </a>
         </div>
-        <div class="avatar" class="d-flex justify-content-center">
-            <a href="https://github.com/CaioOliveiraa" target="_blank">
-                <img src="assets/img/perfilLight.png" alt="Profile_Picture">
-            </a>
-            </div>
     </section>
 
+    <!-- Sobre -->
     <section id="aboutContainer" class="d-flex justify-content-center align-items-center hidden">
-        <div id="about" >
-            <h2>Sobre</h2>
-            <p>Cursando Engenharia da Computação, com foco em
-                desenvolvimento de software. Experiência em Frontend e Backend
-                com ReactJs, TypeScript, NodeJs, Postgres e MongoDB, além de .NET
-                8 e SQL para criação de APIs REST.
-                Sou proativo, organizado e comunicativo, com facilidade para trabalho
-                em equipe e rápida adaptação.
-                </p>
+        <div id="about">
+            <div class="headline" data-aos="fade-up" data-aos-delay="100">
+                <h2>Sobre</h2>
+            </div>
+            <p>
+                Formado em Engenharia da Computação e com foco em desenvolvimento de software, estou buscando uma
+                posição de desenvolvedor. Ao longo da minha formação, adquiri conhecimentos em programação, algoritmos e
+                estruturas de dados, além de especialização em Frontend e Backend com tecnologias como ReactJs,
+                TypeScript, NodeJs, Postgres e MongoDB.
+            </p>
+            <p>
+                Além disso, possuo sólida experiência em desenvolvimento Backend com .NET 8 e SQL, focado na criação de
+                APIs REST e integração de banco de dados, garantindo eficiência e escalabilidade nos projetos.
+            </p>
             <div id="cardContainer">
-                <h2>habilidades</h2>
+                <h2>Tecnologias</h2>
                 <div class="cards"></div>
             </div>
-            
         </div>
     </section>
 
-    <section id="projectsContainer" class="hidden darkMode">  
-        <h2>Projetos</h2>
-        <div class="projectsCards"></div>
+    <!-- Projetos -->
+    <section id="projectsContainer" class="projectsContainer hidden">
+        <div class="container-projects">
+
+            <div class="headline" data-aos="fade-up" data-aos-delay="100">
+                <h2>Alguns Projetos</h2>
+            </div>
+            <div class="content-projects">
+                <div class="cards-projects">
+
+                    <!--Card Projeto 1-->
+                    <div class="card-project" data-aos="zoom-in" data-aos-delay="150">
+                        <div class="img-project">
+                            <img src="assets/images/cloudBox.png" alt="bnd logistics">
+                        </div>
+
+                        <div class="content-card">
+                            <div class="text-project">
+                                <h2>CloudBox</h2>
+                                <span>Drive</span>
+                                <p>Uma plataforma de armazenamento e compartilhamento de arquivos, onde o usuário pode
+                                    fazer upload, gerenciar e compartilhar seus arquivos de forma simples e rápida.</p>
+                                </p>
+                            </div>
+                            <div class="cta-project">
+                                <div class="tag-project">
+                                    <i class="devicon-react-original" title="React"></i>
+                                    <i class="devicon-nextjs-original-wordmark" title="Next.js"></i>
+                                    <i class="devicon-typescript-plain " title="TypeScript"></i>
+                                    <i class="devicon-tailwindcss-plain " title="Tailwind CSS"></i>
+                                    <i class="devicon-plain tech-icon" title="Appwrite"></i>
+                                </div>
+                                <div class="btn-project">
+                                    <a href="https://clone-google-drive-cloud-box.vercel.app/" target="_blank">Acesse o
+                                        site</a>
+                                    <a href="https://github.com/CaioOliveiraa/Clone-Google-Drive---CloudBox"
+                                        target="_blank">Repositório</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Card Projeto 1-->
+
+                    <!--Card Projeto 2-->
+                    <div class="card-project" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="img-project">
+                            <img src="assets/images/theNews.png" alt="Tread Skateboard">
+                        </div>
+
+                        <div class="content-card">
+                            <div class="text-project">
+                                <h2>The News Gamification</h2>
+                                <span>E-Commerce</span>
+                                <p>The News Gamification é um sistema que incentiva a leitura recorrente da newsletter
+                                    The News através de um sistema de streaks e gamificação, inspirado no Duolingo. Os
+                                    leitores acompanham seu progresso de leitura e administradores podem monitorar
+                                    métricas de engajamento.</p>
+                            </div>
+                            <div class="cta-project">
+                                <div class="tag-project">
+                                    <i class="devicon-react-original" title="Vite"></i>
+                                    <i class="devicon-tailwindcss-plain " title="Tailwind CSS"></i>
+                                    <i class="devicon-nodejs-plain" title="Node.js"></i>
+                                    <i class="devicon-typescript-plain " title="TypeScript"></i>
+                                    <i class="devicon-express-original" title="Express.js"></i>
+                                    <i class="devicon-postgresql-plain" title="PostgreSQL"></i>
+                                </div>
+                                <div class="btn-project">
+                                    <a href="https://the-news-gamification-eight.vercel.app/" target="_blank">Acesse o
+                                        site</a>
+                                    <a href="https://github.com/CaioOliveiraa/TheNews-Gamification"
+                                        target="_blank">Repositório</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Card Projeto 2-->
+
+                    <!--Card Projeto 3-->
+                    <div class="card-project" data-aos="zoom-in" data-aos-delay="250">
+                        <div class="img-project">
+                            <img src="assets/images/movieList.png" alt="projeto 3">
+                        </div>
+
+                        <div class="content-card">
+                            <div class="text-project">
+                                <h2>Lista de Filmes</h2>
+                                <span>Tipo de site</span>
+                                <p>É uma aplicação web criada para que os usuários possam salvar nomes de mídas para que
+                                    se lembrem de assitir posteriormente.</p>
+                            </div>
+                            <div class="cta-project">
+                                <div class="tag-project">
+                                    <i class="devicon-react-original" title="React"></i>
+                                    <i class="devicon-nodejs-plain" title="Node.js"></i>
+                                    <i class="devicon-typescript-plain " title="TypeScript"></i>
+                                    <i class="devicon-mongodb-plain" title="MongoDB"></i>
+                                </div>
+                                <div class="btn-project">
+                                    <a href="https://movie-list-frontend-ten.vercel.app/" target="_blank">Acesse o
+                                        site</a>
+                                    <a href="https://github.com/CaioOliveiraa/movieList_2.0"
+                                        target="_blank">Repositorio</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
     </section>
 
+    <!-- Certificados -->
     <section id="certContainer" class="darkMode hidden">
-        <h2>Certificados</h2>
+        <div class="headline" data-aos="fade-up" data-aos-delay="100">
+            <h2>Alguns Certificados</h2>
+        </div>
         <div class="carousel slide" id="meuCarousel">
             <div class="carousel-indicators">
                 <button class="active" data-bs-target="#meuCarousel" data-bs-slide-to="0"></button>
@@ -81,10 +205,10 @@
             </div>
             <div class="carousel-inner ">
                 <div class="carousel-item active ">
-                    <img src="./assets/img/certProgBR1.png" alt="Certificado ProgBR html css JavaScript">
+                    <img src="./assets/images/cert/certProgBR2.png" alt="Certificado ProgBR html css JavaScript">
                 </div>
                 <div class="carousel-item">
-                    <img src="./assets/img/certOneBit.png" alt="Certificado OneBitCode html css JavaScript">
+                    <img src="./assets/images/cert/certProgBR2.png" alt="Certificado OneBitCode html css JavaScript">
                 </div>
             </div>
             <button class="carousel-control-prev" data-bs-target="#meuCarousel" data-bs-slide="prev">
@@ -97,49 +221,53 @@
     </section>
 
 
-    <section id="contactsContainer" class=" darkMode hidden">
-        <div>
-            <h2>Contato</h2>
-            <div id="socialContainer">
-                <div class="socialLinks">
-                    <a href="mailto:caio2601@gmail.com" target="_blank">
-                        <img src="./assets/img/email.svg" alt="email_icon">
-                        <h5>E-mail</h5>
-                        <p>Caio2601@gmail.com</p>
-                    </a>
-                </div>
-                <div class="socialLinks">
-                    <a href="https://wa.me/5513996702766" target="_blank">
-                        <img src="./assets/img/whatsapp.svg" alt="whatsapp_icon">
-                        <h5>Whatsapp</h5>
-                        <p>(13) 99670-2766</p>
-                    </a>
-                </div>
-                <div class="socialLinks">
-                    <a href="https://www.linkedin.com/in/caio-oliveira-bab008237/" target="_blank">
-                        <img src="./assets/img/linkedin.svg" alt="linkedin_icon">
-                        <h5>Linkedin</h5>
-                        <p>caio-oliveira</p>
-                    </a>
-                </div>
-                <div class="socialLinks">
-                    <a href="https://github.com/CaioOliveiraa" target="_blank">
-                        <img src="./assets/img/github.svg" alt="github_icon">
-                        <h5>Github</h5>
-                        <p>CaioOliveiraa</p>
-                    </a>
-                </div>
+    <!-- Contato -->
+    <section id="contactsContainer" class="hidden">
+        <div class="headline" data-aos="fade-up" data-aos-delay="100">
+            <h2>Contatos</h2>
+        </div>
+        <div id="socialContainer">
+            <div class="socialLinks">
+                <a href="mailto:caio2601@gmail.com" target="_blank">
+                    <img src="./assets/images/email.svg" alt="Ícone email" />
+                    <h5>E-mail</h5>
+                    <p>caio2601@gmail.com</p>
+                </a>
+            </div>
+            <div class="socialLinks">
+                <a href="https://wa.me/5513996702766" target="_blank">
+                    <img src="./assets/images/whatsapp.svg" alt="Ícone WhatsApp" />
+                    <h5>WhatsApp</h5>
+                    <p>(13) 99670-2766</p>
+                </a>
+            </div>
+            <div class="socialLinks">
+                <a href="https://www.linkedin.com/in/caio-oliveira-bab008237/" target="_blank">
+                    <img src="./assets/images/linkedin.svg" alt="Ícone LinkedIn" />
+                    <h5>LinkedIn</h5>
+                    <p>caio-oliveira</p>
+                </a>
+            </div>
+            <div class="socialLinks">
+                <a href="https://github.com/CaioOliveiraa" target="_blank">
+                    <img src="./assets/images/github.svg" alt="Ícone GitHub" />
+                    <h5>GitHub</h5>
+                    <p>CaioOliveiraa</p>
+                </a>
             </div>
         </div>
     </section>
 
+    <!-- Rodapé -->
     <footer class="text-center py-3">
         <p>&copy; 2024 Caio Oliveira. Todos os direitos reservados.</p>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>

@@ -26,8 +26,8 @@ function callback() {
 }
 
 function downloadCV() {
-    const CV = "Curriculo_CaioMonteiro.pdf";
-    const pdfUrl = "assets/Curriculo_CaioMonteiro.pdf";
+    const CV = "Curriculo-CaioMonteiro.pdf";
+    const pdfUrl = "assets/Currículo - CaioMonteiro.pdf";
 
     var link = document.createElement('a');
     link.href = pdfUrl;
@@ -84,17 +84,17 @@ function toggleTheme(event) {
 
 document.addEventListener("DOMContentLoaded", function () {
     const languages = [
-        { name: "HTML", image: "./assets/img/html.png" },
-        { name: "CSS", image: "./assets/img/css.png" },
-        { name: "JavaScript", image: "./assets/img/js.png" },
-        { name: "TypeScript", image: "./assets/img/ts.png"},
-        { name: "React.js", image: "./assets/img/react.png" },
-        { name: "Python", image: "./assets/img/python.png" },
-        { name: "Node.js", image: "./assets/img/nd-js.png" },
-        { name: ".NET", image: "./assets/img/net.png" },
-        { name: "C#", image: "./assets/img/cSharp.png" },
-        { name: "MongoDB", image: "./assets/img/mongodb.png" },
-        { name: "PostgreSQL", image: "./assets/img/postgres.png" },
+        { name: "HTML", image: "./assets/images/html.png" },
+        { name: "CSS", image: "./assets/images/css.png" },
+        { name: "JavaScript", image: "./assets/images/js.png" },
+        { name: "TypeScript", image: "./assets/images/ts.png"},
+        { name: "React", image: "./assets/images/react.png" },
+        { name: "Node.js", image: "./assets/images/nd-js.png" },
+        { name: ".NET", image: "./assets/images/net.png" },
+        { name: "C#", image: "./assets/images/cSharp.png" },
+        { name: "MongoDB", image: "./assets/images/mongodb.png" },
+        { name: "PostgreSQL", image: "./assets/images/postgres.png" },
+        { name: "Python", image: "./assets/images/python.png" },
     ];
 
     const cardContainer = document.querySelector(".cards");
@@ -107,37 +107,6 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="${language.image}" alt="${language.name} Logo"> 
         `;
         cardContainer.appendChild(card);
-    });
-});
-
-// Projects Cards 
-
-document.addEventListener("DOMContentLoaded", function () {
-    const projects = [
-        { name: "RideApp", image: "./assets/img/rideApp.png", url: "https://github.com/CaioOliveiraa/AppRide" },
-        { name: "MemoryGame", image: "./assets/img/memoryGame.png", url: "https://github.com/CaioOliveiraa/MemoryGame" },
-        { name: "CalcTelecom", image: "./assets/img/sistComun.png", url: "https://github.com/CaioOliveiraa/calculadora-telecom" },
-        { name: "jogo Da Velha", image: "./assets/img/jogoDaVelha.png", url: "https://github.com/CaioOliveiraa/Tic-Tac_Toe" },
-        { name: "NoticePortal", image: "./assets/img/noticePortal.png", url: "https://github.com/CaioOliveiraa/NoticePortal" },
-        { name: "Cryptography", image: "./assets/img/criptografia.png", url: "https://github.com/CaioOliveiraa/DesafioModalGR/tree/main/questão1_Criptografia" }
-
-    ];
-
-    const projectsCards = document.querySelector(".projectsCards");
-
-    projects.forEach(project => {
-        const card = document.createElement('div');
-        card.classList.add("projectCard");
-        card.innerHTML = `
-            <a href="${project.url}" target="_blank">
-                <div class="projectName">${project.name}</div>
-                <img src="${project.image}" alt="${project.name}">
-            </a>
-        `;
-        projectsCards.appendChild(card);
-
-        const projectName = card.querySelector('.projectName');
-
     });
 });
 
